@@ -12,13 +12,13 @@ public class Departamento {
 							 // para la funcion validarTarea, cosa que solo puede hacer el gerente, aun siendo gerente null
 	private static int idDepartamentos = 0;
 	
-	Departamento(){
+	public Departamento(){
 		idDepartamentos++;
 		this.idDepartamento = idDepartamentos;
 		this.nombreDepartamento = "";
 		this.equipo = null;
 	}
-	Departamento(String nombreDepartamento){
+	public Departamento(String nombreDepartamento){
 		idDepartamentos++;
 		this.idDepartamento = idDepartamentos;
 		this.nombreDepartamento = nombreDepartamento;

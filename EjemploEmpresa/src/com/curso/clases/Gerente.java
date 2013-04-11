@@ -8,13 +8,13 @@ public class Gerente extends Empleado{
 //	private ArrayList<Empleado> equipo;
 
 	//Contructores
-	Gerente(){
+	public Gerente(){
 		super();
 		this.antiguedad = 0;
 	//	gerente = null;
 	//	equipo = null;
 	}
-	Gerente(int dni, String nombre, String puesto, int sueldo, int categoria, int horasTrabajadas, int antiguedad){
+	public Gerente(int dni, String nombre, String puesto, int sueldo, int categoria, int horasTrabajadas, int antiguedad){
 		super(dni, nombre, puesto, sueldo, categoria, horasTrabajadas);
 	//	this.gerente = gerente;
 		this.antiguedad = antiguedad;

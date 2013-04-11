@@ -20,7 +20,7 @@ public class Empresa {
     private ArrayList<Departamento> departamento;
 	
     // Constructores
-    Empresa(){
+    public Empresa(){
     	this.idEmpresa = ++idEmpresas;
     	this.cif = "";
     	this.nombre = "";
@@ -32,7 +32,7 @@ public class Empresa {
     	this.departamento = new ArrayList<Departamento>();
     }
 
-	Empresa(String cif, String nombre, String descripcion, int presupuesto){
+    public Empresa(String cif, String nombre, String descripcion, int presupuesto){
 		this.idEmpresa = ++idEmpresas;
 		this.cif = cif;
     	this.nombre = nombre;

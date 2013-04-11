@@ -109,6 +109,7 @@ public class MysqlConnect{
 
 				  ResultSet results = preparedStatement.executeQuery(SQL);
 
+				  //Con el framework HIBERNATE nos olvidamos del tipo de dato que devuelve
 				  while (results.next()) {
 					  System.out.println("Result obtained: "+ results.getString(2) );
 					  System.out.println("Result obtained: "+ results.getString("DESCRIPCION") );

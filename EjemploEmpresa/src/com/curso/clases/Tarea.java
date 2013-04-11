@@ -10,7 +10,7 @@ public class Tarea {
 	private int estado; // 0 asignada, 1 revisión, 2 realizada
 	
 	// Constructores
-	Tarea(){
+	public Tarea(){
 		this.codigo = -1;
 		this.nombre = "";
 		this.nivelResponsabilidad = 0;
@@ -18,7 +18,7 @@ public class Tarea {
 		this.dificultad = "";
 		this.estado = 0;
 	}
-	Tarea(String nombre, int codigo, int nivelResponsabilidad, int duracion, String dificultad, int estado){
+	public Tarea(String nombre, int codigo, int nivelResponsabilidad, int duracion, String dificultad, int estado){
 		this.codigo = codigo;
 		this.nombre = nombre;
 		this.nivelResponsabilidad = nivelResponsabilidad;

@@ -18,7 +18,7 @@ public class Empleado {
 	public final int maxTareas = 5; // máximo tareas por jornada
 	
 	// Constructores
-	Empleado(){
+	public Empleado(){
 		idEmpleados++;
 		this.idEmpleado = idEmpleados;
 		this.dni = 0;
@@ -29,7 +29,7 @@ public class Empleado {
 		this.funciones = new ArrayList<Tarea>();
 		this.horasTrabajadas = 0;
 	}
-	Empleado(int dni, String nombre, String puesto, int sueldo, int categoria, int horasTrabajdadas){
+	public Empleado(int dni, String nombre, String puesto, int sueldo, int categoria, int horasTrabajdadas){
 		idEmpleados++;
 		this.idEmpleado = idEmpleados;
 		this.dni = dni;
