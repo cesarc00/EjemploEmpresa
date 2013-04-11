@@ -55,8 +55,11 @@ public class Gerente extends Empleado{
 	// Recibe listado de Tareas para validación
 	public ArrayList<Empleado> validarTareasEquipo(ArrayList<Empleado> equipo){
 		if ( (equipo != null) && !(equipo.isEmpty()) ){
+			Empleado empleadoValidado;
 			for (int i=0;i<equipo.size();i++){
-				validarTarea( ( (equipo).get(i)).getFunciones() );
+				empleadoValidado = validarTarea( ( (equipo).get(i)) );
+			//	validarTarea( ( (equipo).get(i)).getFunciones() ); --> Mismo error, faltaba actualizar datos.
+				equipo.set(i, empleadoValidado);
 			}
 		}
 		return equipo;
