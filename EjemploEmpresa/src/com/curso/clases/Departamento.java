@@ -24,28 +24,36 @@ public class Departamento {
 		this.nombreDepartamento = nombreDepartamento;
 		this.equipo = new ArrayList<Empleado>();
 	}
-	
+	public Departamento(String nombreDepartamento, Gerente gerente){
+		idDepartamentos++;
+		this.idDepartamento = idDepartamentos;
+		this.nombreDepartamento = nombreDepartamento;
+		this.equipo = new ArrayList<Empleado>();
+		this.gerente = gerente;
+	}
 	// Métodos
 	// Recibe Empleado y lo añade al equipo del dpto., si es posible
 	public boolean nuevoMiembroEquipo(Empleado empleado){
 		boolean exito = false;
-		if ( this.equipo.size() < maxEquipo ){
-			this.equipo.add(empleado);
-			exito = true;
+		if ( (empleado != null) && (this.equipo!= null) ){
+			if (this.equipo.size() < maxEquipo ){
+				this.equipo.add(empleado);
+				exito = true;
+			}
 		}
 		return exito;
 	}
 	//Recibe Equipo y Empleado, lo añade si es posible
 	public ArrayList<Empleado> nuevoMiembroEquipo(ArrayList<Empleado> equipo, Empleado worker){
-		if ( (worker != null) && (equipo.size() < maxEquipo) ) {
+		if ( (worker != null) && (equipo.size() < maxEquipo) && equipo!=null) {
 			equipo.add(worker);
 		}
 		return equipo;
 	}
 	// Validar todas las tareas del departamento con la ayuda del gerente
-	public void validarDepartamento(){
+	public void validarTareasDepartamento(){
 		if ((this.equipo != null) && !(this.equipo.isEmpty()) ){
-			this.equipo = gerente.validarTareasEquipo(equipo);
+			this.equipo = gerente.validarTareasEquipo(this.equipo);
 		}
 	}
 	// Getters y setters

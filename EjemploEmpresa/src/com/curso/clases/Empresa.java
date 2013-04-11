@@ -82,7 +82,12 @@ public class Empresa {
 	}
 	// Recibe Departamento y lo añade a la empresa
 	public void nuevoDepartamento(Departamento departamento){
-		this.departamento.add(departamento);
+		if ( (this.departamento != null) && (departamento!=null)){
+			this.departamento.add(departamento);
+		}
+	}
+	public void validadDepartamento(){
+	// TODO
 	}
 	// Imprime los nombres e ids de los departamentos. 
 	public void imprimirDepartamentos() {
