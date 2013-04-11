@@ -30,7 +30,7 @@ public class MysqlConnect{
 			//	insert(conn);
 			//  update(conn);
 			//  get(conn);
-			// 	delete(conn);
+			 	delete(conn);
 		 
 		 } 
 		 
@@ -72,7 +72,7 @@ public class MysqlConnect{
 		 try {
 			  
 			  
-			  String SQL = "UPDATE IDIOMAS SET ABBREVIATION = ? WHERE ID_LANGUAGE = ?";
+			  String SQL = "UPDATE IDIOMAS SET ABREVIATURA = ? WHERE ID_IDIOMA = ?";
 			  
 			  //language types update
 			  PreparedStatement preparedStatement = null;
@@ -101,7 +101,7 @@ public class MysqlConnect{
 				 
 				  String id = "2";
 				 				  
-				  String SQL = "SELECT * FROM IDIOMAS WHERE ID_LANGUAGE = "+id;
+				  String SQL = "SELECT * FROM IDIOMAS WHERE ID_IDIOMA = "+id;
 				  
 				  //language types get
 				  PreparedStatement preparedStatement = null;
@@ -111,7 +111,7 @@ public class MysqlConnect{
 
 				  while (results.next()) {
 					  System.out.println("Result obtained: "+ results.getString(2) );
-					  System.out.println("Result obtained: "+ results.getString("DESCRIPTION") );
+					  System.out.println("Result obtained: "+ results.getString("DESCRIPCION") );
 				  }
 
 				  // Close connection
@@ -130,7 +130,7 @@ public class MysqlConnect{
 			  
 			 try {
 
-				  String SQL = "DELETE IDIOMAS WHERE ID_LANGUAGE = ?";
+				  String SQL = "DELETE FROM IDIOMAS WHERE ID_IDIOMA = ?";
 				  
 				  //language types delete
 				  PreparedStatement preparedStatement = null;
