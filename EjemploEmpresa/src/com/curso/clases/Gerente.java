@@ -33,9 +33,12 @@ public class Gerente extends Empleado{
 	} 
 	// Recibe listado de Tareas para validación
 	public ArrayList<Tarea> validarTarea(ArrayList<Tarea> lista){
-		if ( !(lista.isEmpty()) ){
+		if ( (lista != null) && !(lista.isEmpty()) ){
+			Tarea tareaValidada;
 			for (int i=0; i< lista.size();i++){
-				validarTarea(lista.get(i));
+				tareaValidada = this.validarTarea( lista.get(i));
+				lista.set(i, tareaValidada);
+//				validarTarea(lista.get(i)); --> esto era lo mio, me faltaba meterlo en la lista.
 			}
 		}		
 		return lista;
@@ -43,7 +46,8 @@ public class Gerente extends Empleado{
 	// Recibe empleado para validar sus tareas 
 	public Empleado validarTarea(Empleado e){
 		if ( (e != null) && !(e.getFunciones().isEmpty())){
-			validarTarea(e.getFunciones());
+		// validarTarea(e.getFunciones()); --> esto era mio, faltaba actualizar el array del empleado.
+			e.setFunciones( this.validarTarea( e.getFunciones() ) );
 		}
 		return e;
 	}

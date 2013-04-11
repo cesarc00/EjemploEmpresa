@@ -29,7 +29,7 @@ public class Empleado {
 		this.funciones = new ArrayList<Tarea>();
 		this.horasTrabajadas = 0;
 	}
-	public Empleado(int dni, String nombre, String puesto, int sueldo, int categoria, int horasTrabajdadas){
+	public Empleado(int dni, String nombre, String puesto, int sueldo, int categoria, int horasTrabajadas){
 		idEmpleados++;
 		this.idEmpleado = idEmpleados;
 		this.dni = dni;
@@ -38,7 +38,18 @@ public class Empleado {
 		this.sueldo = sueldo;
 		this.categoria = categoria;
 		this.funciones = new ArrayList<Tarea>();
-		this.horasTrabajadas = horasTrabajdadas;
+		this.horasTrabajadas = horasTrabajadas;
+	}
+	public Empleado(int dni, String nombre, String puesto, int sueldo, int categoria, int horasTrabajadas, ArrayList<Tarea> funciones){
+		idEmpleados++;
+		this.idEmpleado = idEmpleados;
+		this.dni = dni;
+		this.nombre = nombre;
+		this.puesto = puesto;
+		this.sueldo = sueldo;
+		this.categoria = categoria;
+		this.funciones = funciones;
+		this.horasTrabajadas = horasTrabajadas;
 	}
 	// Métodos
 	// Recibe Tarea y, si puede realizarla, la ejecuta y la añade a su lista de Tareas
