@@ -8,7 +8,7 @@ public class Empresa {
 	
 	// Atributos
 	private int idEmpresa;
-	private static int idEmpresas = 0;
+	static int idEmpresas = 0;
 	private String cif;
 	private String nombre;
 	private String descripcion;
@@ -86,7 +86,7 @@ public class Empresa {
 			this.departamento.add(departamento);
 		}
 	}
-	public void validadDepartamento(){
+	public void validarDepartamento(){
 	// TODO
 	}
 	// Imprime los nombres e ids de los departamentos. 
@@ -140,7 +140,7 @@ public class Empresa {
 	public int getIdEmpresa(){
 		return idEmpresa;
 	}
-	public static int getNUMERO_EMPRESAS() {
+	static int getNUMERO_EMPRESAS() {
 		return NUMERO_EMPRESAS;
 	}
 	public String getCif() {
